@@ -8,12 +8,12 @@ import { HeaderComponent } from './components/header/header.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { LeftSideComponent } from './components/left-side/left-side.component';
-import { APP_ROUTING } from './app.routes';
 
 import {environment} from '../environments/environment';
 import {AngularFireModule} from 'angularfire2';
 import {AngularFirestoreModule} from 'angularfire2/firestore';
 import {AngularFireAuthModule} from 'angularfire2/auth';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
     declarations: [
@@ -26,11 +26,11 @@ import {AngularFireAuthModule} from 'angularfire2/auth';
     ],
     imports: [
         BrowserModule,
-        APP_ROUTING,
+        AppRoutingModule,
         FormsModule,
         AngularFireModule.initializeApp(environment.firebase),
         AngularFirestoreModule,
-        AngularFireAuthModule,
+        AngularFireAuthModule
     ],
     providers: [],
     bootstrap: [AppComponent]
